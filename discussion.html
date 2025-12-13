@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion - The Innovator's Toolkit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">The Innovator's Toolkit</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="startups-101.html">Startups 101</a></li>
+                <li><a href="ai-entrepreneurship.html">AI in Entrepreneurship</a></li>
+                <li><a href="patents-ip.html">Patents & IP</a></li>
+                <li><a href="open-data.html">Open Data</a></li>
+                <li><a href="tools-resources.html">Tools & Resources</a></li>
+                <li><a href="discussion.html" class="active">Discussion</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="content-page">
+            <h1>Discussion</h1>
+            <p class="lead">
+                Share ideas, ask questions, and learn from other students building projects. This is a space for 
+                honest conversations about entrepreneurship, startups, and innovation.
+            </p>
+
+            <div class="discussion-container">
+                <div class="discussion-form">
+                    <h2>Start a Discussion</h2>
+                    <form class="discussion-form-inner">
+                        <div class="form-group">
+                            <label for="topic">Topic</label>
+                            <input type="text" id="topic" name="topic" placeholder="What do you want to discuss?" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select a category</option>
+                                <option value="startups">Startups 101</option>
+                                <option value="ai">AI in Entrepreneurship</option>
+                                <option value="ip">Patents & IP</option>
+                                <option value="data">Open Data</option>
+                                <option value="tools">Tools & Resources</option>
+                                <option value="general">General Discussion</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Share your thoughts, ask questions, or start a conversation..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Post Discussion</button>
+                    </form>
+                </div>
+
+                <div class="discussion-list">
+                    <h2>Recent Discussions</h2>
+                    <div class="discussion-item">
+                        <div class="discussion-header">
+                            <h3>How do I validate my startup idea without spending money?</h3>
+                            <span class="discussion-category">Startups 101</span>
+                        </div>
+                        <p class="discussion-preview">I have an idea for an app but I'm not sure if people would actually use it. What are some free ways to test if there's demand?</p>
+                        <div class="discussion-meta">
+                            <span>Posted 2 days ago</span>
+                            <span>5 replies</span>
+                        </div>
+                    </div>
+
+                    <div class="discussion-item">
+                        <div class="discussion-header">
+                            <h3>Best AI tools for student projects?</h3>
+                            <span class="discussion-category">AI in Entrepreneurship</span>
+                        </div>
+                        <p class="discussion-preview">Looking for recommendations on AI tools that are actually useful for building a small project. What have you tried?</p>
+                        <div class="discussion-meta">
+                            <span>Posted 5 days ago</span>
+                            <span>12 replies</span>
+                        </div>
+                    </div>
+
+                    <div class="discussion-item">
+                        <div class="discussion-header">
+                            <h3>Do I need a patent for my app idea?</h3>
+                            <span class="discussion-category">Patents & IP</span>
+                        </div>
+                        <p class="discussion-preview">I'm building a mobile app and wondering if I should file for a patent. Is it worth it for a student project?</p>
+                        <div class="discussion-meta">
+                            <span>Posted 1 week ago</span>
+                            <span>8 replies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Made by Arav Desai</p>
+            <p class="footer-note">Free, non-profit, and always will be.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
