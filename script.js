@@ -200,6 +200,14 @@ function getDiscussions() {
     return stored ? JSON.parse(stored) : [];
 }
 
+function deleteDiscussion(id) {
+    const discussions = getDiscussions();
+    const filtered = discussions.filter(d => d.id !== id);
+    localStorage.setItem('discussions', JSON.stringify(filtered));
+    displayDiscussions();
+    showMessage('Discussion deleted successfully!', 'success');
+}
+
 function displayDiscussions() {
     const discussionList = document.querySelector('.discussion-list');
     if (!discussionList) return;
@@ -235,6 +243,7 @@ function displayDiscussions() {
 function createDiscussionItem(discussion) {
     const item = document.createElement('div');
     item.className = 'discussion-item';
+    item.setAttribute('data-id', discussion.id);
     
     const timeAgo = getTimeAgo(discussion.timestamp);
     
@@ -247,8 +256,17 @@ function createDiscussionItem(discussion) {
         <div class="discussion-meta">
             <span>Posted ${timeAgo}</span>
             <span>${discussion.replies} ${discussion.replies === 1 ? 'reply' : 'replies'}</span>
+            <button class="delete-discussion-btn" data-id="${discussion.id}" aria-label="Delete discussion">🗑️ Delete</button>
         </div>
     `;
+    
+    // Add delete button event listener
+    const deleteBtn = item.querySelector('.delete-discussion-btn');
+    deleteBtn.addEventListener('click', function() {
+        if (confirm('Are you sure you want to delete this discussion?')) {
+            deleteDiscussion(discussion.id);
+        }
+    });
     
     return item;
 }

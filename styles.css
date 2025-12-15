@@ -824,6 +824,25 @@ pre code {
     gap: 1.5rem;
     font-size: 0.875rem;
     color: var(--text-muted);
+    align-items: center;
+}
+
+.delete-discussion-btn {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: auto;
+}
+
+.delete-discussion-btn:hover {
+    background: rgba(239, 68, 68, 0.3);
+    border-color: rgba(239, 68, 68, 0.5);
+    transform: translateY(-1px);
 }
 
 .discussion-empty {
