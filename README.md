@@ -99,6 +99,9 @@ This project is free and open for educational use. Feel free to modify and adapt
 - No tracking or analytics included
 - Designed to be simple, fast, and accessible
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> a3bf30b19d5fe187acee96190183581d9993bd07
