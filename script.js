@@ -110,7 +110,35 @@ function initDiscussionBoard() {
                 categoryLabel: 'Startups 101',
                 message: 'I have an idea for an app but I\'m not sure if people would actually use it. What are some free ways to test if there\'s demand?',
                 timestamp: Date.now() - 172800000,
-                replies: 5
+                replies: 5,
+                isSample: true,
+                repliesList: [
+                    {
+                        id: Date.now() - 172800000 + 1000,
+                        message: 'Try creating a simple landing page with a signup form. If people sign up, there\'s interest!',
+                        timestamp: Date.now() - 172800000 + 1000
+                    },
+                    {
+                        id: Date.now() - 172800000 + 2000,
+                        message: 'Talk to potential users directly. Go to places where your target audience hangs out and ask them questions.',
+                        timestamp: Date.now() - 172800000 + 2000
+                    },
+                    {
+                        id: Date.now() - 172800000 + 3000,
+                        message: 'Use social media polls and surveys. Twitter, Reddit, and Facebook groups are great for this.',
+                        timestamp: Date.now() - 172800000 + 3000
+                    },
+                    {
+                        id: Date.now() - 172800000 + 4000,
+                        message: 'Build a minimal prototype (MVP) and show it to people. You don\'t need a full app to test the concept.',
+                        timestamp: Date.now() - 172800000 + 4000
+                    },
+                    {
+                        id: Date.now() - 172800000 + 5000,
+                        message: 'Check if similar products exist and how they\'re doing. If competitors are successful, that\'s actually a good sign!',
+                        timestamp: Date.now() - 172800000 + 5000
+                    }
+                ]
             },
             {
                 id: Date.now() - 432000000, // 5 days ago
@@ -119,7 +147,70 @@ function initDiscussionBoard() {
                 categoryLabel: 'AI in Entrepreneurship',
                 message: 'Looking for recommendations on AI tools that are actually useful for building a small project. What have you tried?',
                 timestamp: Date.now() - 432000000,
-                replies: 12
+                replies: 12,
+                isSample: true,
+                repliesList: [
+                    {
+                        id: Date.now() - 432000000 + 1000,
+                        message: 'ChatGPT is great for generating code and debugging. I use it all the time for my projects.',
+                        timestamp: Date.now() - 432000000 + 1000
+                    },
+                    {
+                        id: Date.now() - 432000000 + 2000,
+                        message: 'Claude (Anthropic) is excellent for longer conversations and analyzing documents.',
+                        timestamp: Date.now() - 432000000 + 2000
+                    },
+                    {
+                        id: Date.now() - 432000000 + 3000,
+                        message: 'For image generation, try DALL-E or Midjourney. Both have free tiers for students.',
+                        timestamp: Date.now() - 432000000 + 3000
+                    },
+                    {
+                        id: Date.now() - 432000000 + 4000,
+                        message: 'GitHub Copilot is amazing if you\'re coding. It\'s like having a pair programmer.',
+                        timestamp: Date.now() - 432000000 + 4000
+                    },
+                    {
+                        id: Date.now() - 432000000 + 5000,
+                        message: 'For data analysis, try Google\'s Bard or Microsoft Copilot. Both integrate well with other tools.',
+                        timestamp: Date.now() - 432000000 + 5000
+                    },
+                    {
+                        id: Date.now() - 432000000 + 6000,
+                        message: 'Don\'t forget about Hugging Face - it has tons of free AI models you can use.',
+                        timestamp: Date.now() - 432000000 + 6000
+                    },
+                    {
+                        id: Date.now() - 432000000 + 7000,
+                        message: 'For text-to-speech, ElevenLabs has a great free tier. Perfect for adding voice to projects.',
+                        timestamp: Date.now() - 432000000 + 7000
+                    },
+                    {
+                        id: Date.now() - 432000000 + 8000,
+                        message: 'If you need AI for video, Runway ML has some cool features. The free tier is limited but useful.',
+                        timestamp: Date.now() - 432000000 + 8000
+                    },
+                    {
+                        id: Date.now() - 432000000 + 9000,
+                        message: 'For API access, OpenAI and Anthropic both have student-friendly pricing.',
+                        timestamp: Date.now() - 432000000 + 9000
+                    },
+                    {
+                        id: Date.now() - 432000000 + 10000,
+                        message: 'Check out Replicate - it lets you run AI models without setting up infrastructure.',
+                        timestamp: Date.now() - 432000000 + 10000
+                    },
+                    {
+                        id: Date.now() - 432000000 + 11000,
+                        message: 'For AI-powered search, Perplexity is great. It cites sources which is helpful for research.',
+                        timestamp: Date.now() - 432000000 + 11000
+                    },
+                    {
+                        id: Date.now() - 432000000 + 12000,
+                        message: 'Don\'t overlook browser extensions like Monica or AIPRM - they add AI to your workflow.',
+                        timestamp: Date.now() - 432000000 + 12000
+                    }
+                ]
             },
             {
                 id: Date.now() - 604800000, // 1 week ago
@@ -128,10 +219,56 @@ function initDiscussionBoard() {
                 categoryLabel: 'Patents & IP',
                 message: 'I\'m building a mobile app and wondering if I should file for a patent. Is it worth it for a student project?',
                 timestamp: Date.now() - 604800000,
-                replies: 8
+                replies: 8,
+                isSample: true,
+                repliesList: [
+                    {
+                        id: Date.now() - 604800000 + 1000,
+                        message: 'For most student projects, patents aren\'t necessary. Focus on building and getting users first.',
+                        timestamp: Date.now() - 604800000 + 1000
+                    },
+                    {
+                        id: Date.now() - 604800000 + 2000,
+                        message: 'Patents are expensive (thousands of dollars) and take years. For a student project, that money is better spent on development.',
+                        timestamp: Date.now() - 604800000 + 2000
+                    },
+                    {
+                        id: Date.now() - 604800000 + 3000,
+                        message: 'Software patents are also hard to get. Most apps don\'t qualify because they\'re not novel enough.',
+                        timestamp: Date.now() - 604800000 + 3000
+                    },
+                    {
+                        id: Date.now() - 604800000 + 4000,
+                        message: 'If you\'re really concerned, you can file a provisional patent yourself for much cheaper (~$100-200).',
+                        timestamp: Date.now() - 604800000 + 4000
+                    },
+                    {
+                        id: Date.now() - 604800000 + 5000,
+                        message: 'Focus on trademarks for your app name instead - that\'s more practical and affordable.',
+                        timestamp: Date.now() - 604800000 + 5000
+                    },
+                    {
+                        id: Date.now() - 604800000 + 6000,
+                        message: 'Keep good records of your development process. That can help if you ever need to prove you created it first.',
+                        timestamp: Date.now() - 604800000 + 6000
+                    },
+                    {
+                        id: Date.now() - 604800000 + 7000,
+                        message: 'Most successful startups file patents later, after they have traction and funding. Don\'t worry about it now.',
+                        timestamp: Date.now() - 604800000 + 7000
+                    },
+                    {
+                        id: Date.now() - 604800000 + 8000,
+                        message: 'If your app becomes successful and you get investors, they\'ll help you with IP strategy. Focus on building first!',
+                        timestamp: Date.now() - 604800000 + 8000
+                    }
+                ]
             }
         ];
         localStorage.setItem('discussions', JSON.stringify(sampleDiscussions));
+    } else {
+        // Migrate existing discussions to include repliesList if missing
+        migrateDiscussions();
     }
 
     // Load and display discussions
@@ -168,7 +305,9 @@ function initDiscussionBoard() {
             categoryLabel: categoryLabels[category],
             message: message,
             timestamp: Date.now(),
-            replies: 0
+            replies: 0,
+            isSample: false,
+            repliesList: []
         };
 
         // Save to localStorage
@@ -200,12 +339,118 @@ function getDiscussions() {
     return stored ? JSON.parse(stored) : [];
 }
 
+function migrateDiscussions() {
+    const discussions = getDiscussions();
+    let needsUpdate = false;
+    
+    discussions.forEach(discussion => {
+        if (!discussion.hasOwnProperty('repliesList')) {
+            discussion.repliesList = [];
+            needsUpdate = true;
+        }
+        if (!discussion.hasOwnProperty('isSample')) {
+            discussion.isSample = false;
+            needsUpdate = true;
+        }
+        // Update reply count from repliesList if it exists
+        if (discussion.repliesList && discussion.repliesList.length > 0) {
+            discussion.replies = discussion.repliesList.length;
+        }
+    });
+    
+    if (needsUpdate) {
+        localStorage.setItem('discussions', JSON.stringify(discussions));
+    }
+}
+
 function deleteDiscussion(id) {
     const discussions = getDiscussions();
+    const discussion = discussions.find(d => d.id === id);
+    if (discussion && discussion.isSample) {
+        showMessage('Cannot delete sample discussions.', 'info');
+        return;
+    }
     const filtered = discussions.filter(d => d.id !== id);
     localStorage.setItem('discussions', JSON.stringify(filtered));
     displayDiscussions();
     showMessage('Discussion deleted successfully!', 'success');
+}
+
+function toggleReplies(discussionId) {
+    const repliesContainer = document.getElementById(`replies-${discussionId}`);
+    const repliesList = document.getElementById(`replies-list-${discussionId}`);
+    
+    if (repliesContainer.style.display === 'none') {
+        repliesContainer.style.display = 'block';
+        loadReplies(discussionId);
+    } else {
+        repliesContainer.style.display = 'none';
+    }
+}
+
+function loadReplies(discussionId) {
+    const discussions = getDiscussions();
+    const discussion = discussions.find(d => d.id === discussionId);
+    if (!discussion) return;
+    
+    const repliesList = document.getElementById(`replies-list-${discussionId}`);
+    if (!repliesList) return;
+    
+    repliesList.innerHTML = '';
+    
+    if (!discussion.repliesList || discussion.repliesList.length === 0) {
+        repliesList.innerHTML = '<p class="no-replies">No replies yet. Be the first to reply!</p>';
+        return;
+    }
+    
+    // Sort replies by timestamp (oldest first)
+    const sortedReplies = [...discussion.repliesList].sort((a, b) => a.timestamp - b.timestamp);
+    
+    sortedReplies.forEach(reply => {
+        const replyItem = document.createElement('div');
+        replyItem.className = 'reply-item';
+        const replyTimeAgo = getTimeAgo(reply.timestamp);
+        replyItem.innerHTML = `
+            <div class="reply-content">${escapeHtml(reply.message)}</div>
+            <div class="reply-meta">${replyTimeAgo}</div>
+        `;
+        repliesList.appendChild(replyItem);
+    });
+}
+
+function addReply(discussionId, replyText) {
+    const discussions = getDiscussions();
+    const discussion = discussions.find(d => d.id === discussionId);
+    if (!discussion) return;
+    
+    if (!discussion.repliesList) {
+        discussion.repliesList = [];
+    }
+    
+    const newReply = {
+        id: Date.now(),
+        message: replyText,
+        timestamp: Date.now()
+    };
+    
+    discussion.repliesList.push(newReply);
+    discussion.replies = discussion.repliesList.length;
+    
+    localStorage.setItem('discussions', JSON.stringify(discussions));
+    
+    // Reload replies display
+    loadReplies(discussionId);
+    
+    // Update reply count in meta
+    const discussionItem = document.querySelector(`[data-id="${discussionId}"]`);
+    if (discussionItem) {
+        const repliesSpan = discussionItem.querySelector('.discussion-meta span:nth-child(2)');
+        if (repliesSpan) {
+            repliesSpan.textContent = `${discussion.replies} ${discussion.replies === 1 ? 'reply' : 'replies'}`;
+        }
+    }
+    
+    showMessage('Reply posted successfully!', 'success');
 }
 
 function displayDiscussions() {
@@ -246,6 +491,13 @@ function createDiscussionItem(discussion) {
     item.setAttribute('data-id', discussion.id);
     
     const timeAgo = getTimeAgo(discussion.timestamp);
+    const repliesCount = discussion.repliesList ? discussion.repliesList.length : discussion.replies || 0;
+    const isSample = discussion.isSample === true;
+    
+    // Initialize repliesList if it doesn't exist
+    if (!discussion.repliesList) {
+        discussion.repliesList = [];
+    }
     
     item.innerHTML = `
         <div class="discussion-header">
@@ -255,16 +507,48 @@ function createDiscussionItem(discussion) {
         <p class="discussion-preview">${escapeHtml(discussion.message)}</p>
         <div class="discussion-meta">
             <span>Posted ${timeAgo}</span>
-            <span>${discussion.replies} ${discussion.replies === 1 ? 'reply' : 'replies'}</span>
-            <button class="delete-discussion-btn" data-id="${discussion.id}" aria-label="Delete discussion">🗑️ Delete</button>
+            <span>${repliesCount} ${repliesCount === 1 ? 'reply' : 'replies'}</span>
+            <button class="reply-discussion-btn" data-id="${discussion.id}" type="button">💬 Reply</button>
+            ${!isSample ? '<button class="delete-discussion-btn" data-id="' + discussion.id + '" aria-label="Delete discussion" type="button">Delete</button>' : ''}
+        </div>
+        <div class="discussion-replies-container" id="replies-${discussion.id}" style="display: none;">
+            <div class="replies-list" id="replies-list-${discussion.id}"></div>
+            <div class="reply-form-container">
+                <form class="reply-form" data-discussion-id="${discussion.id}">
+                    <textarea class="reply-input" placeholder="Write your reply..." rows="3" required></textarea>
+                    <button type="submit" class="submit-reply-btn">Post Reply</button>
+                </form>
+            </div>
         </div>
     `;
     
-    // Add delete button event listener
-    const deleteBtn = item.querySelector('.delete-discussion-btn');
-    deleteBtn.addEventListener('click', function() {
-        if (confirm('Are you sure you want to delete this discussion?')) {
-            deleteDiscussion(discussion.id);
+    // Add reply button event listener
+    const replyBtn = item.querySelector('.reply-discussion-btn');
+    replyBtn.addEventListener('click', function() {
+        toggleReplies(discussion.id);
+    });
+    
+    // Add delete button event listener (only if not sample)
+    if (!isSample) {
+        const deleteBtn = item.querySelector('.delete-discussion-btn');
+        if (deleteBtn) {
+            deleteBtn.addEventListener('click', function() {
+                if (confirm('Are you sure you want to delete this discussion?')) {
+                    deleteDiscussion(discussion.id);
+                }
+            });
+        }
+    }
+    
+    // Add reply form submission
+    const replyForm = item.querySelector('.reply-form');
+    replyForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const replyInput = this.querySelector('.reply-input');
+        const replyText = replyInput.value.trim();
+        if (replyText) {
+            addReply(discussion.id, replyText);
+            replyInput.value = '';
         }
     });
     
