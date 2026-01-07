@@ -89,9 +89,59 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Clickable Card Functionality
+    initClickableCards();
+
     // Discussion Board Functionality
     initDiscussionBoard();
 });
+
+// Clickable Card Handler
+function initClickableCards() {
+    const clickableCards = document.querySelectorAll('.clickable-card');
+    
+    clickableCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Don't toggle if clicking on a link
+            if (e.target.tagName === 'A') return;
+            
+            const details = this.querySelector('.card-details');
+            const isActive = this.classList.contains('active');
+            
+            // Close all other cards in the same container (optional)
+            const parent = this.closest('.ip-grid, .topic-grid, .use-case-grid, .source-grid, .example-grid, .decision-tree, .ethics-list, .myth-list, .tips-grid, .resource-list, .card-grid');
+            if (parent && !e.shiftKey) {
+                parent.querySelectorAll('.clickable-card.active').forEach(otherCard => {
+                    if (otherCard !== this) {
+                        otherCard.classList.remove('active');
+                        const otherDetails = otherCard.querySelector('.card-details');
+                        if (otherDetails) {
+                            otherDetails.style.display = 'none';
+                        }
+                    }
+                });
+            }
+            
+            // Toggle current card
+            if (details) {
+                if (isActive) {
+                    this.classList.remove('active');
+                    details.style.display = 'none';
+                } else {
+                    this.classList.add('active');
+                    details.style.display = 'block';
+                    // Smooth scroll to card if needed
+                    setTimeout(() => {
+                        const rect = this.getBoundingClientRect();
+                        if (rect.bottom > window.innerHeight || rect.top < 0) {
+                            this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        }
+                    }, 100);
+                }
+            }
+        });
+    });
+}
 
 // Discussion Board Functions
 function initDiscussionBoard() {

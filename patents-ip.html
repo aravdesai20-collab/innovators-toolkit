@@ -44,7 +44,7 @@
             <div class="decision-section">
                 <h2>Do You Need a Patent?</h2>
                 <div class="decision-tree">
-                    <div class="decision-card">
+                    <div class="decision-card clickable-card">
                         <div class="decision-icon">❌</div>
                         <h3>Probably Not If:</h3>
                         <ul class="decision-list">
@@ -53,8 +53,13 @@
                             <li>You can't afford $5K-$15K+</li>
                             <li>Success depends on execution</li>
                         </ul>
+                        <div class="card-details" style="display: none;">
+                            <div class="details-content">
+                                <strong>Why skip patents:</strong> Focus resources on building and validating. Most successful startups file later after traction.
+                            </div>
+                        </div>
                     </div>
-                    <div class="decision-card">
+                    <div class="decision-card clickable-card">
                         <div class="decision-icon">✅</div>
                         <h3>Maybe If:</h3>
                         <ul class="decision-list">
@@ -63,6 +68,11 @@
                             <li>You're in a patent-heavy industry</li>
                             <li>You're seeking investment</li>
                         </ul>
+                        <div class="card-details" style="display: none;">
+                            <div class="details-content">
+                                <strong>When it makes sense:</strong> Hardware/physical products, medical devices, or if investors require it. Consider provisional patents first ($100-200).
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,23 +80,47 @@
             <div class="ip-types">
                 <h2>Types of IP</h2>
                 <div class="ip-grid">
-                    <div class="ip-card">
+                    <div class="ip-card clickable-card" data-type="patent">
                         <div class="ip-icon">📜</div>
                         <h3>Patents</h3>
                         <p>Right to stop others. Costly. Time-consuming.</p>
                         <div class="ip-cost">$5K - $15K+</div>
+                        <div class="card-details" style="display: none;">
+                            <div class="details-content">
+                                <strong>What it protects:</strong> Inventions, processes, designs<br>
+                                <strong>Duration:</strong> 20 years (utility), 15 years (design)<br>
+                                <strong>Requirements:</strong> Novel, useful, non-obvious<br>
+                                <strong>Best for:</strong> Hardware, medical devices, unique processes
+                            </div>
+                        </div>
                     </div>
-                    <div class="ip-card">
+                    <div class="ip-card clickable-card" data-type="copyright">
                         <div class="ip-icon">©️</div>
                         <h3>Copyrights</h3>
                         <p>Automatic for code and creative work. Free.</p>
                         <div class="ip-cost">Free</div>
+                        <div class="card-details" style="display: none;">
+                            <div class="details-content">
+                                <strong>What it protects:</strong> Code, writing, music, art, designs<br>
+                                <strong>Duration:</strong> Life of author + 70 years<br>
+                                <strong>Automatic:</strong> Created when you make it (no filing needed)<br>
+                                <strong>Best for:</strong> Software, websites, content, creative works
+                            </div>
+                        </div>
                     </div>
-                    <div class="ip-card">
+                    <div class="ip-card clickable-card" data-type="trademark">
                         <div class="ip-icon">™️</div>
                         <h3>Trademarks</h3>
                         <p>Protect brand names and logos. Important for branding.</p>
                         <div class="ip-cost">$250+</div>
+                        <div class="card-details" style="display: none;">
+                            <div class="details-content">
+                                <strong>What it protects:</strong> Names, logos, slogans, brand identity<br>
+                                <strong>Duration:</strong> Renewable every 10 years<br>
+                                <strong>Use it:</strong> Add ™ immediately, ® after registration<br>
+                                <strong>Best for:</strong> App names, company names, logos, taglines
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,25 +128,40 @@
             <div class="myth-section">
                 <h2>Common Myths</h2>
                 <div class="myth-list">
-                    <div class="myth-item">
+                    <div class="myth-item clickable-card">
                         <span class="myth-icon">❌</span>
                         <div>
                             <strong>"I need a patent before sharing my idea"</strong>
                             <p>Reality: Most ideas aren't patentable. Share and validate first.</p>
+                            <div class="card-details" style="display: none;">
+                                <div class="details-content">
+                                    <strong>Better approach:</strong> Validate first, file later if needed. Most successful startups do this.
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="myth-item">
+                    <div class="myth-item clickable-card">
                         <span class="myth-icon">❌</span>
                         <div>
                             <strong>"A patent will protect me from competition"</strong>
                             <p>Reality: Only if you can afford to enforce it (hundreds of thousands).</p>
+                            <div class="card-details" style="display: none;">
+                                <div class="details-content">
+                                    <strong>Reality:</strong> Enforcement costs $200K+. Focus on building better product instead.
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="myth-item">
+                    <div class="myth-item clickable-card">
                         <span class="myth-icon">❌</span>
                         <div>
                             <strong>"I should patent my app idea"</strong>
                             <p>Reality: Software patents are hard to get. Focus on execution instead.</p>
+                            <div class="card-details" style="display: none;">
+                                <div class="details-content">
+                                    <strong>Reality:</strong> Software patents rarely granted. Execution > patents for apps.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -533,6 +533,40 @@ h3 {
     border-left-width: 6px;
 }
 
+.resource-item.clickable-card {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.resource-item.clickable-card::after {
+    content: 'Click for details →';
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: 500;
+}
+
+.resource-item.clickable-card:hover::after {
+    opacity: 1;
+}
+
+.resource-item.clickable-card.active::after {
+    content: 'Click to close ↑';
+}
+
+.resource-item.clickable-card:hover {
+    background: var(--bg-tertiary);
+    box-shadow: var(--shadow-md), 0 0 20px rgba(96, 165, 250, 0.2);
+    transform: translateX(8px) scale(1.02);
+    border-left-color: var(--primary-dark);
+    border-left-width: 6px;
+}
+
 .resource-item h4 {
     margin-bottom: 0.5rem;
     color: var(--primary-color);
@@ -1353,6 +1387,125 @@ pre code {
     border-color: var(--primary-color);
 }
 
+/* Clickable Card Styles */
+.clickable-card {
+    cursor: pointer;
+    position: relative;
+}
+
+.clickable-card::after {
+    content: 'Click for details →';
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: 500;
+}
+
+.clickable-card:hover::after {
+    opacity: 1;
+}
+
+.clickable-card.active::after {
+    content: 'Click to close ↑';
+}
+
+.card-details {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--primary-color);
+    animation: slideDown 0.3s ease-out;
+}
+
+.card-details .details-content {
+    padding: 1rem;
+    background: rgba(96, 165, 250, 0.1);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+    line-height: 1.8;
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.card-details .details-content strong {
+    color: var(--primary-color);
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        max-height: 500px;
+        transform: translateY(0);
+    }
+}
+
+.clickable-card.active {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md), 0 0 30px rgba(96, 165, 250, 0.3);
+}
+
+/* Update card hover states for clickable cards */
+.clickable-card:hover {
+    border-color: var(--primary-color);
+}
+
+.ip-card.clickable-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: var(--shadow-lg), 0 0 40px rgba(96, 165, 250, 0.3);
+}
+
+.topic-card.clickable-card:hover {
+    transform: translateY(-10px) scale(1.03) rotateY(2deg);
+    box-shadow: var(--shadow-lg), 0 0 50px rgba(96, 165, 250, 0.4);
+}
+
+.use-case-card.clickable-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: var(--shadow-md), 0 0 30px rgba(96, 165, 250, 0.3);
+}
+
+.source-card.clickable-card:hover,
+.example-card.clickable-card:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: var(--shadow-lg), 0 0 40px rgba(96, 165, 250, 0.3);
+}
+
+.decision-card.clickable-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md), 0 0 30px rgba(96, 165, 250, 0.3);
+    transform: translateY(-6px) scale(1.02);
+}
+
+.ethics-item.clickable-card {
+    cursor: pointer;
+}
+
+.ethics-item.clickable-card:hover {
+    transform: translateX(8px) scale(1.02);
+    box-shadow: var(--shadow-md), 0 0 20px rgba(96, 165, 250, 0.2);
+    border-left-width: 6px;
+}
+
+.myth-item.clickable-card {
+    cursor: pointer;
+}
+
+.myth-item.clickable-card:hover {
+    transform: translateX(8px) scale(1.02);
+    box-shadow: var(--shadow-md), 0 0 20px rgba(239, 68, 68, 0.2);
+    border-left-width: 6px;
+}
+
 .ip-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -1743,6 +1896,63 @@ pre code {
     background: linear-gradient(135deg, rgba(96, 165, 250, 0.3) 0%, rgba(139, 92, 246, 0.3) 100%);
     box-shadow: var(--shadow-md), 0 0 15px rgba(96, 165, 250, 0.3);
     border-left-width: 6px;
+}
+
+.tip-item.clickable-card {
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.tip-item.clickable-card::after {
+    content: '→';
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tip-item.clickable-card:hover::after {
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+.tip-item.clickable-card.active::after {
+    content: '↑';
+}
+
+.tip-item .card-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--primary-color);
+}
+
+.card.clickable-card {
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.card.clickable-card::after {
+    content: 'Click for details →';
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: 500;
+}
+
+.card.clickable-card:hover::after {
+    opacity: 1;
+}
+
+.card.clickable-card.active::after {
+    content: 'Click to close ↑';
 }
 
 /* Visual Enhancements */
