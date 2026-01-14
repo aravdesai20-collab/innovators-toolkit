@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Templates - The Innovator's Toolkit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">The Innovator's Toolkit</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="startups-101.html">Startups 101</a></li>
+                <li><a href="ai-entrepreneurship.html">AI in Entrepreneurship</a></li>
+                <li><a href="patents-ip.html">Patents & IP</a></li>
+                <li><a href="open-data.html">Open Data</a></li>
+                <li><a href="tools-resources.html">Tools & Resources</a></li>
+                <li><a href="calculators.html">Interactive Tools</a></li>
+                <li><a href="templates.html" class="active">Templates</a></li>
+                <li><a href="success-stories.html">Success Stories</a></li>
+                <li><a href="discussion.html">Discussion</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="interactive-page">
+            <h1>Startup Templates</h1>
+            <p class="page-subtitle">Ready-to-use templates to help you build faster</p>
+
+            <div class="content-intro">
+                <p>
+                    Browse these free templates to jumpstart your startup journey. Click "View Template" to see the full content, 
+                    then copy it to your clipboard and paste into your own documents. All templates are designed specifically 
+                    for students and early-stage founders. Customize them for your projects.
+                </p>
+            </div>
+
+            <div class="templates-grid">
+                <div class="template-card">
+                    <div class="template-icon">📊</div>
+                    <h3>Pitch Deck Template</h3>
+                    <p>10-slide pitch deck template for presenting your startup idea</p>
+                    <div class="template-info">
+                        <span class="template-type">Google Slides</span>
+                        <span class="template-size">Includes: Problem, Solution, Market, Business Model, Traction, Team, Ask</span>
+                    </div>
+                    <button class="template-btn" onclick="showTemplate('pitch-deck')">👁️ View Template</button>
+                    <div class="template-preview">
+                        <strong>What's inside:</strong>
+                        <ul>
+                            <li>Problem & Solution slides</li>
+                            <li>Market opportunity</li>
+                            <li>Business model canvas</li>
+                            <li>Traction & milestones</li>
+                            <li>Team & ask</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-icon">📋</div>
+                    <h3>Business Model Canvas</h3>
+                    <p>One-page business model canvas template</p>
+                    <div class="template-info">
+                        <span class="template-type">PDF / Google Docs</span>
+                        <span class="template-size">Fillable template with all sections</span>
+                    </div>
+                    <button class="template-btn" onclick="showTemplate('business-canvas')">👁️ View Template</button>
+                    <div class="template-preview">
+                        <strong>What's inside:</strong>
+                        <ul>
+                            <li>Value propositions</li>
+                            <li>Customer segments</li>
+                            <li>Revenue streams</li>
+                            <li>Key resources & activities</li>
+                            <li>Cost structure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-icon">💬</div>
+                    <h3>Customer Interview Script</h3>
+                    <p>Structured questions for validating your startup idea</p>
+                    <div class="template-info">
+                        <span class="template-type">PDF / Google Docs</span>
+                        <span class="template-size">20+ questions with guide</span>
+                    </div>
+                    <button class="template-btn" onclick="showTemplate('interview-script')">👁️ View Template</button>
+                    <div class="template-preview">
+                        <strong>What's inside:</strong>
+                        <ul>
+                            <li>Problem discovery questions</li>
+                            <li>Current solution questions</li>
+                            <li>Willingness to pay questions</li>
+                            <li>How to conduct interviews guide</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-icon">🗺️</div>
+                    <h3>MVP Roadmap Template</h3>
+                    <p>Plan and track your MVP development timeline</p>
+                    <div class="template-info">
+                        <span class="template-type">Excel / Google Sheets</span>
+                        <span class="template-size">Includes timeline, tasks, and milestones</span>
+                    </div>
+                    <button class="template-btn" onclick="showTemplate('mvp-roadmap')">👁️ View Template</button>
+                    <div class="template-preview">
+                        <strong>What's inside:</strong>
+                        <ul>
+                            <li>Week-by-week breakdown</li>
+                            <li>Feature prioritization</li>
+                            <li>Task tracking</li>
+                            <li>Milestone checkpoints</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-icon">📈</div>
+                    <h3>Project Tracking Sheet</h3>
+                    <p>Track your startup progress and metrics</p>
+                    <div class="template-info">
+                        <span class="template-type">Google Sheets</span>
+                        <span class="template-size">Includes KPIs and progress tracking</span>
+                    </div>
+                    <button class="template-btn" onclick="showTemplate('project-tracker')">👁️ View Template</button>
+                    <div class="template-preview">
+                        <strong>What's inside:</strong>
+                        <ul>
+                            <li>Goal setting</li>
+                            <li>Metric tracking</li>
+                            <li>Progress visualization</li>
+                            <li>Milestone tracking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-icon">📝</div>
+                    <h3>Landing Page Copy Template</h3>
+                    <p>Copywriting framework for your landing page</p>
+                    <div class="template-info">
+                        <span class="template-type">Google Docs</span>
+                        <span class="template-size">Hero, benefits, features, CTA sections</span>
+                    </div>
+                    <button class="template-btn" onclick="showTemplate('landing-copy')">👁️ View Template</button>
+                    <div class="template-preview">
+                        <strong>What's inside:</strong>
+                        <ul>
+                            <li>Hero headline formulas</li>
+                            <li>Value proposition framework</li>
+                            <li>Feature descriptions</li>
+                            <li>Call-to-action templates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-note">
+                <h3>💡 How to Use These Templates</h3>
+                <p>
+                    <strong>Step 1:</strong> Click "View Template" on any template card above to open it in a formatted view.
+                </p>
+                <p>
+                    <strong>Step 2:</strong> Read through the template content, which includes sections, checklists, and guidance 
+                    tailored for your startup needs.
+                </p>
+                <p>
+                    <strong>Step 3:</strong> Click "Copy to Clipboard" to copy the entire template, then paste it into Google Docs, 
+                    Google Slides, Google Sheets, or any document editor and customize it for your project.
+                </p>
+                <p>
+                    <strong>Recommended Order:</strong> Start with the Customer Interview Script to validate your idea, then use 
+                    the Business Model Canvas to map out your approach, and finally create your Pitch Deck when you're ready to present.
+                </p>
+            </div>
+
+            <!-- Template Modal -->
+            <div id="templateModal" class="template-modal" style="display: none;">
+                <div class="template-modal-content">
+                    <div class="template-modal-header">
+                        <h2 id="templateModalTitle">Template</h2>
+                        <button class="template-modal-close" onclick="closeTemplate()">&times;</button>
+                    </div>
+                    <div class="template-modal-body">
+                        <div id="templateContent"></div>
+                    </div>
+                    <div class="template-modal-footer">
+                        <button class="template-btn-copy" onclick="copyTemplate()">📋 Copy to Clipboard</button>
+                        <button class="template-btn-close" onclick="closeTemplate()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>Made by Arav Desai</p>
+            <p class="footer-note">Free, non-profit, and always will be.</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>
+        const templates = {
+            'pitch-deck': {
+                title: 'Pitch Deck Template - 10 Slides',
+                content: `
+# PITCH DECK TEMPLATE
+
+## Slide 1: Title
+- Company Name
+- Tagline (one sentence)
+- Your Name & Contact
+
+## Slide 2: The Problem
+- What problem are you solving?
+- Who has this problem?
+- Why is it painful?
+
+## Slide 3: The Solution
+- Your product/service in 1-2 sentences
+- Key features (3-5 bullet points)
+- How it solves the problem
+
+## Slide 4: Market Opportunity
+- Total Addressable Market (TAM)
+- Target market size
+- Market growth trends
+
+## Slide 5: Business Model
+- How you make money
+- Pricing strategy
+- Revenue streams
+
+## Slide 6: Traction
+- Users/customers (if any)
+- Key milestones achieved
+- Metrics that matter (signups, revenue, etc.)
+
+## Slide 7: Competition
+- Who else solves this?
+- Your competitive advantage
+- Why you're different
+
+## Slide 8: Go-to-Market
+- How you'll acquire customers
+- Marketing strategy
+- Sales channels
+
+## Slide 9: Team
+- Key team members
+- Relevant experience
+- Why you're the right team
+
+## Slide 10: The Ask
+- What you're raising (if seeking funding)
+- How you'll use the money
+- Timeline/next steps
+
+---
+TIP: Keep each slide simple. Use visuals. Practice your pitch out loud.
+`
+            },
+            'business-canvas': {
+                title: 'Business Model Canvas Template',
+                content: `
+# BUSINESS MODEL CANVAS
+
+## VALUE PROPOSITIONS
+[What unique value do you provide?]
+- Benefit 1
+- Benefit 2
+- Benefit 3
+
+## CUSTOMER SEGMENTS
+[Who are your customers?]
+- Segment 1: [Description]
+- Segment 2: [Description]
+
+## CUSTOMER RELATIONSHIPS
+[How do you interact with customers?]
+- Personal assistance
+- Self-service
+- Community
+- Automated service
+
+## CHANNELS
+[How do you reach customers?]
+- Website
+- Social media
+- Direct sales
+- Partners
+
+## REVENUE STREAMS
+[How do you make money?]
+- Revenue source 1: [Pricing model]
+- Revenue source 2: [Pricing model]
+
+## KEY RESOURCES
+[What do you need?]
+- Physical (office, equipment)
+- Intellectual (patents, IP)
+- Human (team, skills)
+- Financial (funding, cash)
+
+## KEY ACTIVITIES
+[What do you do?]
+- Production
+- Problem solving
+- Platform/network
+
+## KEY PARTNERSHIPS
+[Who helps you?]
+- Suppliers
+- Partners
+- Strategic alliances
+
+## COST STRUCTURE
+[What does it cost?]
+- Fixed costs: [List]
+- Variable costs: [List]
+- One-time costs: [List]
+
+---
+FILL THIS OUT: Print this and fill it out by hand or copy into Google Docs.
+`
+            },
+            'interview-script': {
+                title: 'Customer Interview Script',
+                content: `
+# CUSTOMER INTERVIEW SCRIPT
+
+## INTRODUCTION (2 minutes)
+"Hi! I'm working on [your project/idea] and I'd love to learn about your experience with [problem area]. This will take about 15-20 minutes. Is now a good time?"
+
+## PROBLEM DISCOVERY QUESTIONS
+
+1. "Tell me about the last time you [encountered the problem]."
+   - Follow-up: "What happened? How did you feel?"
+
+2. "How often does this problem occur?"
+   - Daily? Weekly? Monthly?
+
+3. "What have you tried to solve this problem?"
+   - List their current solutions
+
+4. "What don't you like about your current solution?"
+   - What's missing?
+   - What's frustrating?
+
+## SOLUTION VALIDATION QUESTIONS
+
+5. "If there was a solution that [your solution description], would that help?"
+   - Yes/No/Maybe
+   - Why or why not?
+
+6. "What would make you switch from your current solution?"
+   - Features? Price? Convenience?
+
+7. "How much would you pay for this?"
+   - $0? $10? $50? $100+?
+   - Get specific number
+
+8. "Who else do you know who has this problem?"
+   - Get referrals
+   - Understand network
+
+## CURRENT BEHAVIOR QUESTIONS
+
+9. "Walk me through your typical day/workflow."
+   - When does the problem occur?
+   - What triggers it?
+
+10. "What tools/products do you currently use?"
+    - Competitors
+    - Alternative solutions
+
+## CLOSING QUESTIONS
+
+11. "Is there anything else I should know about this problem?"
+    - Open-ended
+
+12. "Can I follow up with you to show you what I build?"
+    - Get permission for follow-up
+
+---
+HOW TO CONDUCT:
+- Ask open-ended questions (what, how, why)
+- Listen more than you talk
+- Don't sell - just learn
+- Take notes
+- Aim for 10-20 interviews minimum
+`
+            },
+            'mvp-roadmap': {
+                title: 'MVP Roadmap Template',
+                content: `
+# MVP ROADMAP TEMPLATE
+
+## WEEK 1-2: FOUNDATION
+- [ ] Set up development environment
+- [ ] Create project structure
+- [ ] Design core user flow
+- [ ] Set up hosting/deployment
+
+## WEEK 2-3: CORE FEATURES
+- [ ] User authentication (sign up/login)
+- [ ] Main feature #1: [Describe]
+- [ ] Basic UI/styling
+- [ ] Database setup
+
+## WEEK 3-4: ESSENTIAL FEATURES
+- [ ] Main feature #2: [Describe]
+- [ ] Payment integration (if needed)
+- [ ] Basic admin dashboard
+- [ ] Error handling
+
+## WEEK 4-5: POLISH & TESTING
+- [ ] Fix bugs
+- [ ] User testing (5-10 people)
+- [ ] Collect feedback
+- [ ] Make critical improvements
+
+## WEEK 5-6: LAUNCH PREP
+- [ ] Final bug fixes
+- [ ] Create landing page
+- [ ] Set up analytics
+- [ ] Prepare launch materials
+
+## LAUNCH
+- [ ] Deploy to production
+- [ ] Announce to friends/family
+- [ ] Post on Product Hunt/Reddit
+- [ ] Get first 10 users
+
+## POST-LAUNCH (Week 7-8)
+- [ ] Monitor user feedback
+- [ ] Fix critical issues
+- [ ] Plan next features
+- [ ] Iterate based on usage
+
+---
+TEMPLATE FOR SPREADSHEET:
+Week | Task | Status | Owner | Notes
+-----|------|--------|-------|------
+1    | Setup project | [ ] | You | 
+2    | Build auth | [ ] | You |
+...etc
+
+Copy this into Google Sheets or Excel.
+`
+            },
+            'project-tracker': {
+                title: 'Project Tracking Sheet',
+                content: `
+# PROJECT TRACKING SHEET
+
+## GOALS & MILESTONES
+
+| Goal | Target Date | Status | Notes |
+|------|-------------|--------|-------|
+| Launch MVP | [Date] | ⚪ Not Started | |
+| Get 10 users | [Date] | ⚪ Not Started | |
+| Get 100 users | [Date] | ⚪ Not Started | |
+| First revenue | [Date] | ⚪ Not Started | |
+
+## METRICS TO TRACK
+
+### User Metrics
+- Total users: 0
+- Active users (weekly): 0
+- Sign-ups this week: 0
+- User retention rate: 0%
+
+### Business Metrics
+- Revenue: $0
+- Monthly Recurring Revenue (MRR): $0
+- Customer Acquisition Cost (CAC): $0
+- Lifetime Value (LTV): $0
+
+### Product Metrics
+- Feature usage: [Track key features]
+- Error rate: 0%
+- Page load time: [seconds]
+- User satisfaction: [survey score]
+
+## WEEKLY CHECK-IN TEMPLATE
+
+### Week of [Date]
+- **Progress:** What did you accomplish?
+- **Challenges:** What blocked you?
+- **Next Week:** What are you focusing on?
+- **Metrics:** Update your numbers
+
+## TASK TRACKING
+
+| Task | Priority | Status | Due Date | Notes |
+|------|----------|--------|----------|-------|
+| [Task] | High/Med/Low | ⚪ | [Date] | |
+| [Task] | High/Med/Low | ⚪ | [Date] | |
+| [Task] | High/Med/Low | ⚪ | [Date] | |
+
+STATUS: ⚪ Not Started | 🟡 In Progress | ✅ Complete | ❌ Blocked
+
+---
+Copy this into Google Sheets. Update weekly. Keep it simple!
+`
+            },
+            'landing-copy': {
+                title: 'Landing Page Copy Template',
+                content: `
+# LANDING PAGE COPY TEMPLATE
+
+## HERO SECTION
+
+### Headline (H1)
+[Your value proposition in one sentence]
+Example formulas:
+- "The [solution] for [target audience] who want [benefit]"
+- "[Action verb] [problem] in [timeframe]"
+- "Stop [problem]. Start [solution]."
+
+### Subheadline
+[Supporting sentence that expands on headline]
+
+### Call-to-Action Button
+"Get Started Free" or "Start Building" or "Join Now"
+
+---
+
+## BENEFIT SECTION
+
+### Benefit 1
+**Heading:** [Main benefit]
+**Description:** [1-2 sentences explaining the benefit]
+**Icon/Visual:** [Relevant emoji or image idea]
+
+### Benefit 2
+**Heading:** [Main benefit]
+**Description:** [1-2 sentences explaining the benefit]
+**Icon/Visual:** [Relevant emoji or image idea]
+
+### Benefit 3
+**Heading:** [Main benefit]
+**Description:** [1-2 sentences explaining the benefit]
+**Icon/Visual:** [Relevant emoji or image idea]
+
+---
+
+## FEATURES SECTION
+
+### Feature 1
+[Feature name]
+- What it does
+- Why it matters
+
+### Feature 2
+[Feature name]
+- What it does
+- Why it matters
+
+### Feature 3
+[Feature name]
+- What it does
+- Why it matters
+
+---
+
+## SOCIAL PROOF SECTION
+
+### Testimonials
+"[Quote from user]" - [Name, Role]
+
+### Stats/Numbers
+- "[Number] users"
+- "[Number] downloads"
+- "[Number]% satisfaction"
+
+---
+
+## HOW IT WORKS SECTION
+
+### Step 1
+[Brief description]
+
+### Step 2
+[Brief description]
+
+### Step 3
+[Brief description]
+
+---
+
+## FINAL CALL-TO-ACTION
+
+### Headline
+"Ready to [get started/solve the problem]?"
+
+### Button
+"Get Started" or "Sign Up Free"
+
+### Supporting Text
+[Any additional encouragement or offer]
+
+---
+
+## FAQ SECTION
+
+**Q: [Common question]**
+A: [Clear, concise answer]
+
+**Q: [Common question]**
+A: [Clear, concise answer]
+
+**Q: [Common question]**
+A: [Clear, concise answer]
+
+---
+
+## TIPS FOR LANDING PAGES:
+- Keep it simple - one clear message
+- Use action verbs
+- Focus on benefits, not features
+- Make CTA buttons stand out
+- Remove distractions
+- Test different headlines
+- Mobile-first design
+`
+            }
+        };
+
+        function formatTemplateContent(content) {
+            let html = '<div class="template-document">';
+            const lines = content.split('\n');
+            let inList = false;
+            let currentSection = '';
+            let sectionCount = 0;
+            
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                
+                // Subheading (H3) - check first
+                if (line.startsWith('### ')) {
+                    if (inList) {
+                        html += '</ul>';
+                        inList = false;
+                    }
+                    html += `<h3 class="template-h3">${escapeHtml(line.substring(4))}</h3>`;
+                }
+                // Section heading (H2)
+                else if (line.startsWith('## ')) {
+                    if (inList) {
+                        html += '</ul>';
+                        inList = false;
+                    }
+                    if (currentSection) {
+                        html += '</div>';
+                    }
+                    sectionCount++;
+                    const sectionTitle = escapeHtml(line.substring(3));
+                    html += `<div class="template-section template-section-${sectionCount}"><h2 class="template-h2"><span class="section-number">${sectionCount}</span>${sectionTitle}</h2>`;
+                    currentSection = sectionTitle;
+                }
+                // Main heading (H1) - only single #
+                else if (line.startsWith('# ')) {
+                    if (inList) {
+                        html += '</ul></div>';
+                        inList = false;
+                    }
+                    if (currentSection) {
+                        html += '</div>';
+                        currentSection = '';
+                    }
+                    html += `<h1 class="template-h1">${escapeHtml(line.substring(2))}</h1>`;
+                }
+                // Numbered list item
+                else if (/^\d+\.\s/.test(line)) {
+                    if (!inList) {
+                        html += '<ol class="template-numbered-list">';
+                        inList = true;
+                    }
+                    const itemText = line.replace(/^\d+\.\s/, '');
+                    html += `<li>${formatInlineText(itemText)}</li>`;
+                }
+                // List item
+                else if (line.startsWith('- ')) {
+                    if (inList) {
+                        // Check if we're in a numbered list - close it first
+                        const lastOl = html.lastIndexOf('<ol');
+                        const lastUl = html.lastIndexOf('<ul');
+                        if (lastOl > lastUl) {
+                            html += '</ol>';
+                        }
+                    }
+                    if (!inList || html.endsWith('</ol>')) {
+                        html += '<ul class="template-list">';
+                        inList = true;
+                    }
+                    const itemText = line.substring(2);
+                    // Check if it's a checkbox
+                    if (itemText.trim().startsWith('[ ]')) {
+                        const cleanText = itemText.replace(/^\[\s*\]\s*/, '');
+                        html += `<li class="template-checklist-item"><span class="checklist-box">☐</span><span>${formatInlineText(cleanText)}</span></li>`;
+                    } else {
+                        html += `<li>${formatInlineText(itemText)}</li>`;
+                    }
+                }
+                // Regular text with formatting
+                else if (line && !line.startsWith('---')) {
+                    if (inList) {
+                        // Close the appropriate list type
+                        if (html.endsWith('</li>') && html.lastIndexOf('<ol') > html.lastIndexOf('<ul')) {
+                            html += '</ol>';
+                        } else {
+                            html += '</ul>';
+                        }
+                        inList = false;
+                    }
+                    
+                    // Check for special formatting
+                    if (line.match(/^\*\*[^*]+\*\*$/)) {
+                        // Bold only
+                        html += `<p class="template-strong">${escapeHtml(line.substring(2, line.length - 2))}</p>`;
+                    } else if (line.includes('**') && line.includes(':**')) {
+                        // Label format
+                        const parts = line.split(':**');
+                        const label = parts[0].replace(/\*\*/g, '');
+                        const value = parts.slice(1).join(':**');
+                        html += `<p class="template-label"><strong>${escapeHtml(label)}</strong>${escapeHtml(value)}</p>`;
+                    } else if (line.startsWith('**') && line.includes('** ')) {
+                        // Bold start
+                        html += `<p class="template-label">${formatInlineText(line)}</p>`;
+                    } else if (line.startsWith('Example:') || line.startsWith('TIP:') || line.startsWith('FILL THIS OUT:') || line.startsWith('HOW TO CONDUCT:') || line.startsWith('TEMPLATE FOR') || line.startsWith('Copy this') || line.startsWith('STATUS:') || line.startsWith('TIPS FOR')) {
+                        html += `<p class="template-tip">${formatInlineText(line)}</p>`;
+                    } else if (line.startsWith('[') && line.endsWith(']')) {
+                        // Placeholder text
+                        html += `<p class="template-placeholder">${escapeHtml(line)}</p>`;
+                    } else if (line.length > 0) {
+                        html += `<p class="template-text">${formatInlineText(line)}</p>`;
+                    }
+                }
+                // Horizontal rule
+                else if (line.startsWith('---')) {
+                    if (inList) {
+                        html += '</ul>';
+                        inList = false;
+                    }
+                    html += '<hr class="template-divider">';
+                }
+                // Empty line
+                else if (!line) {
+                    if (inList) {
+                        html += '</ul>';
+                        inList = false;
+                    }
+                }
+            }
+            
+            if (inList) html += '</ul>';
+            if (currentSection) html += '</div>';
+            html += '</div>';
+            
+            return html;
+        }
+
+        function formatInlineText(text) {
+            // Format bold text
+            text = text.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+            // Format italic text
+            text = text.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+            // Format inline code
+            text = text.replace(/`([^`]+)`/g, '<code class="template-inline-code">$1</code>');
+            text = escapeHtml(text);
+            // Unescape HTML tags we just added
+            text = text.replace(/&lt;strong&gt;/g, '<strong>').replace(/&lt;\/strong&gt;/g, '</strong>');
+            text = text.replace(/&lt;em&gt;/g, '<em>').replace(/&lt;\/em&gt;/g, '</em>');
+            text = text.replace(/&lt;code class="template-inline-code"&gt;/g, '<code class="template-inline-code">').replace(/&lt;\/code&gt;/g, '</code>');
+            return text;
+        }
+
+        function showTemplate(type) {
+            const template = templates[type];
+            if (!template) return;
+            
+            document.getElementById('templateModalTitle').textContent = template.title;
+            document.getElementById('templateContent').innerHTML = formatTemplateContent(template.content);
+            document.getElementById('templateModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // Store template content for copying
+            window.currentTemplateContent = template.content;
+        }
+
+        function closeTemplate() {
+            document.getElementById('templateModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function copyTemplate() {
+            if (!window.currentTemplateContent) return;
+            
+            navigator.clipboard.writeText(window.currentTemplateContent).then(() => {
+                const btn = document.querySelector('.template-btn-copy');
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Copied!';
+                btn.style.background = '#10b981';
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '';
+                }, 2000);
+            }).catch(() => {
+                alert('Could not copy to clipboard. Please manually select and copy the text.');
+            });
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Close modal on outside click
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('templateModal');
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeTemplate();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>

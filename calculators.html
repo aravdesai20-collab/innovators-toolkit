@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tools - The Innovator's Toolkit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">The Innovator's Toolkit</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="startups-101.html">Startups 101</a></li>
+                <li><a href="ai-entrepreneurship.html">AI in Entrepreneurship</a></li>
+                <li><a href="patents-ip.html">Patents & IP</a></li>
+                <li><a href="open-data.html">Open Data</a></li>
+                <li><a href="tools-resources.html">Tools & Resources</a></li>
+                <li><a href="calculators.html" class="active">Interactive Tools</a></li>
+                <li><a href="templates.html">Templates</a></li>
+                <li><a href="success-stories.html">Success Stories</a></li>
+                <li><a href="discussion.html">Discussion</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="interactive-page">
+            <h1>Interactive Tools</h1>
+            <p class="page-subtitle">Practical calculators and validators to help you make decisions</p>
+
+            <div class="content-intro">
+                <p>
+                    Use these interactive tools to validate your ideas, calculate funding needs, track your MVP progress, 
+                    and estimate costs. All tools work entirely in your browser - no data is sent anywhere.
+                </p>
+            </div>
+
+            <div class="tool-section">
+                <div class="tool-card">
+                    <div class="tool-icon">💡</div>
+                    <h2>Idea Validator</h2>
+                    <p class="tool-description">Answer questions to get a validation score for your startup idea</p>
+                    
+                    <div class="validator-container" id="ideaValidator">
+                        <div class="validator-step active" data-step="0">
+                            <h3>Step 1: Problem Definition</h3>
+                            <p class="step-question">What specific problem are you solving?</p>
+                            <textarea id="problem" class="tool-input" placeholder="Describe the problem clearly..."></textarea>
+                            <button class="tool-btn" onclick="nextStep()">Next →</button>
+                        </div>
+
+                        <div class="validator-step" data-step="1">
+                            <h3>Step 2: Target Audience</h3>
+                            <p class="step-question">Who has this problem?</p>
+                            <textarea id="audience" class="tool-input" placeholder="Describe your target users..."></textarea>
+                            <button class="tool-btn" onclick="prevStep()">← Back</button>
+                            <button class="tool-btn" onclick="nextStep()">Next →</button>
+                        </div>
+
+                        <div class="validator-step" data-step="2">
+                            <h3>Step 3: Current Solutions</h3>
+                            <p class="step-question">How do people solve this problem today?</p>
+                            <textarea id="currentSolutions" class="tool-input" placeholder="List existing solutions..."></textarea>
+                            <button class="tool-btn" onclick="prevStep()">← Back</button>
+                            <button class="tool-btn" onclick="nextStep()">Next →</button>
+                        </div>
+
+                        <div class="validator-step" data-step="3">
+                            <h3>Step 4: Your Solution</h3>
+                            <p class="step-question">How is your solution different or better?</p>
+                            <textarea id="yourSolution" class="tool-input" placeholder="Explain your unique approach..."></textarea>
+                            <button class="tool-btn" onclick="prevStep()">← Back</button>
+                            <button class="tool-btn" onclick="nextStep()">Next →</button>
+                        </div>
+
+                        <div class="validator-step" data-step="4">
+                            <h3>Step 5: Willingness to Pay</h3>
+                            <p class="step-question">Would people pay for this solution?</p>
+                            <select id="willingnessToPay" class="tool-select">
+                                <option value="">Select an option...</option>
+                                <option value="high">Yes, definitely - they already spend money on this</option>
+                                <option value="medium">Maybe - depends on price and quality</option>
+                                <option value="low">Unlikely - they use free alternatives</option>
+                            </select>
+                            <button class="tool-btn" onclick="prevStep()">← Back</button>
+                            <button class="tool-btn" onclick="nextStep()">Next →</button>
+                        </div>
+
+                        <div class="validator-step" data-step="5">
+                            <h3>Step 6: Market Size</h3>
+                            <p class="step-question">How many people have this problem?</p>
+                            <select id="marketSize" class="tool-select">
+                                <option value="">Select an option...</option>
+                                <option value="large">Large - millions of potential users</option>
+                                <option value="medium">Medium - thousands to hundreds of thousands</option>
+                                <option value="small">Small - hundreds to thousands</option>
+                            </select>
+                            <button class="tool-btn" onclick="prevStep()">← Back</button>
+                            <button class="tool-btn" onclick="nextStep()">Next →</button>
+                        </div>
+
+                        <div class="validator-step" data-step="6">
+                            <h3>Step 7: MVP Feasibility</h3>
+                            <p class="step-question">Can you build a simple MVP in 2-4 weeks?</p>
+                            <select id="mvpFeasibility" class="tool-select">
+                                <option value="">Select an option...</option>
+                                <option value="yes">Yes, easily</option>
+                                <option value="maybe">Maybe, with help</option>
+                                <option value="no">No, too complex</option>
+                            </select>
+                            <button class="tool-btn" onclick="prevStep()">← Back</button>
+                            <button class="tool-btn" onclick="calculateScore()">Get Score →</button>
+                        </div>
+
+                        <div class="validator-step" data-step="7" id="resultStep">
+                            <h3>Your Validation Score</h3>
+                            <div class="score-display" id="scoreDisplay"></div>
+                            <div class="score-details" id="scoreDetails"></div>
+                            <div class="score-recommendations" id="recommendations"></div>
+                            <button class="tool-btn" onclick="resetValidator()">Start Over</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <div class="tool-card">
+                    <div class="tool-icon">💰</div>
+                    <h2>Funding Calculator</h2>
+                    <p class="tool-description">Estimate how much funding you need based on your runway and monthly costs</p>
+                    
+                    <div class="calculator-container">
+                        <div class="calc-input-group">
+                            <label for="monthlyBurn">Monthly Expenses ($)</label>
+                            <input type="number" id="monthlyBurn" class="tool-input" placeholder="e.g., 5000" min="0">
+                            <small>Total monthly costs (salaries, rent, tools, etc.)</small>
+                        </div>
+
+                        <div class="calc-input-group">
+                            <label for="currentRevenue">Current Monthly Revenue ($)</label>
+                            <input type="number" id="currentRevenue" class="tool-input" placeholder="e.g., 2000" min="0" value="0">
+                            <small>Current monthly income (if any)</small>
+                        </div>
+
+                        <div class="calc-input-group">
+                            <label for="runwayMonths">Desired Runway (months)</label>
+                            <input type="number" id="runwayMonths" class="tool-input" placeholder="e.g., 12" min="1" value="12">
+                            <small>How many months you want to operate without additional funding</small>
+                        </div>
+
+                        <button class="tool-btn primary" onclick="calculateFunding()">Calculate Funding Needs</button>
+
+                        <div class="calc-result" id="fundingResult" style="display: none;">
+                            <h3>Funding Recommendation</h3>
+                            <div class="result-box" id="fundingAmount"></div>
+                            <div class="result-details" id="fundingDetails"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <div class="tool-card">
+                    <div class="tool-icon">📜</div>
+                    <h2>Patent Cost Estimator</h2>
+                    <p class="tool-description">Get rough estimates for patent costs</p>
+                    
+                    <div class="calculator-container">
+                        <div class="calc-input-group">
+                            <label for="patentType">Patent Type</label>
+                            <select id="patentType" class="tool-select">
+                                <option value="utility">Utility Patent (most common)</option>
+                                <option value="design">Design Patent</option>
+                                <option value="provisional">Provisional Patent</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-input-group">
+                            <label for="filingMethod">Filing Method</label>
+                            <select id="filingMethod" class="tool-select">
+                                <option value="self">Self-filed (DIY)</option>
+                                <option value="attorney">Patent Attorney</option>
+                            </select>
+                        </div>
+
+                        <button class="tool-btn primary" onclick="calculatePatentCost()">Estimate Cost</button>
+
+                        <div class="calc-result" id="patentResult" style="display: none;">
+                            <h3>Estimated Costs</h3>
+                            <div class="result-box" id="patentCost"></div>
+                            <div class="result-details" id="patentDetails"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <div class="tool-card">
+                    <div class="tool-icon">🚀</div>
+                    <h2>MVP Progress Tracker</h2>
+                    <p class="tool-description">Track your MVP development progress</p>
+                    
+                    <div class="progress-tracker-container">
+                        <div class="progress-item">
+                            <input type="checkbox" id="mvp1" onchange="updateMVPProgress()">
+                            <label for="mvp1">✅ Define core features (MVP scope)</label>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" id="mvp2" onchange="updateMVPProgress()">
+                            <label for="mvp2">✅ Build user authentication</label>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" id="mvp3" onchange="updateMVPProgress()">
+                            <label for="mvp3">✅ Implement main feature</label>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" id="mvp4" onchange="updateMVPProgress()">
+                            <label for="mvp4">✅ Add payment/stripe (if needed)</label>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" id="mvp5" onchange="updateMVPProgress()">
+                            <label for="mvp5">✅ Deploy to production</label>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" id="mvp6" onchange="updateMVPProgress()">
+                            <label for="mvp6">✅ Get first 10 users</label>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" id="mvp7" onchange="updateMVPProgress()">
+                            <label for="mvp7">✅ Collect user feedback</label>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" id="mvp8" onchange="updateMVPProgress()">
+                            <label for="mvp8">✅ Iterate based on feedback</label>
+                        </div>
+
+                        <div class="progress-bar-container">
+                            <div class="progress-bar-label">Overall Progress</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="mvpProgressFill" style="width: 0%"></div>
+                            </div>
+                            <div class="progress-percent" id="mvpProgressPercent">0%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-section">
+                <div class="tool-card">
+                    <div class="tool-icon">🎯</div>
+                    <h2>Startup Journey Quiz</h2>
+                    <p class="tool-description">Find your personalized learning path based on where you are</p>
+                    
+                    <div class="quiz-container" id="journeyQuiz">
+                        <div class="quiz-step active" data-quiz-step="0">
+                            <h3>What stage are you at?</h3>
+                            <div class="quiz-options">
+                                <button class="quiz-option" onclick="selectQuizAnswer(0, 'idea')">💡 I have an idea</button>
+                                <button class="quiz-option" onclick="selectQuizAnswer(0, 'validating')">🔍 Validating my idea</button>
+                                <button class="quiz-option" onclick="selectQuizAnswer(0, 'building')">🔨 Building my MVP</button>
+                                <button class="quiz-option" onclick="selectQuizAnswer(0, 'launched')">🚀 Already launched</button>
+                            </div>
+                        </div>
+
+                        <div class="quiz-step" data-quiz-step="1">
+                            <h3>What's your main challenge right now?</h3>
+                            <div class="quiz-options">
+                                <button class="quiz-option" onclick="selectQuizAnswer(1, 'validation')">Finding users to validate</button>
+                                <button class="quiz-option" onclick="selectQuizAnswer(1, 'funding')">Need funding</button>
+                                <button class="quiz-option" onclick="selectQuizAnswer(1, 'technical')">Technical skills</button>
+                                <button class="quiz-option" onclick="selectQuizAnswer(1, 'growth')">Growing users</button>
+                            </div>
+                        </div>
+
+                        <div class="quiz-result" id="quizResult" style="display: none;">
+                            <h3>Your Personalized Path</h3>
+                            <div id="pathContent"></div>
+                            <button class="tool-btn" onclick="resetQuiz()">Take Again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Made by Arav Desai</p>
+            <p class="footer-note">Free, non-profit, and always will be.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
