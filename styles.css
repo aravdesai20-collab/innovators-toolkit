@@ -616,55 +616,13 @@ h3 {
     text-decoration: underline;
 }
 
-/* Subtle Links */
-.subtle-links {
-    padding: 1.5rem 0;
-    text-align: center;
-    margin-top: 2rem;
-    opacity: 0.4;
-    transition: opacity 0.3s ease;
-}
-
-.subtle-links:hover {
-    opacity: 0.6;
-}
-
-.subtle-links .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.subtle-links a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 0.7rem;
-    font-weight: 400;
-    transition: color 0.2s ease;
-    padding: 0.2rem 0;
-}
-
-.subtle-links a:hover {
-    color: var(--text-color);
-    text-decoration: underline;
-}
-
-.link-separator {
-    color: var(--text-secondary);
-    font-size: 0.7rem;
-    opacity: 0.3;
-    padding: 0 0.25rem;
-}
-
 /* Footer */
 .footer {
     background: linear-gradient(180deg, var(--bg-secondary) 0%, #0a0f1a 50%, #050810 100%);
     color: var(--text-color);
     padding: 3rem 0;
     text-align: center;
-    margin-top: 0;
+    margin-top: 4rem;
     border-top: 1px solid var(--border-color);
     position: relative;
 }
@@ -842,23 +800,6 @@ h3 {
 
     .message-card {
         padding: 2rem;
-    }
-
-    .subtle-links {
-        padding: 1rem 0;
-    }
-
-    .subtle-links .container {
-        gap: 0.4rem;
-        padding: 0 1rem;
-    }
-
-    .subtle-links a {
-        font-size: 0.65rem;
-    }
-
-    .link-separator {
-        font-size: 0.65rem;
     }
 }
 
