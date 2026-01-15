@@ -205,6 +205,8 @@ body::before {
     border: none;
     cursor: pointer;
     gap: 4px;
+    padding: 0.5rem;
+    z-index: 1001;
 }
 
 .nav-toggle span {
@@ -213,6 +215,11 @@ body::before {
     background-color: var(--text-color);
     transition: all 0.3s;
     border-radius: 2px;
+    display: block;
+}
+
+.nav-toggle:hover span {
+    background-color: var(--primary-color);
 }
 
 /* Hero Section */
@@ -644,16 +651,6 @@ h3 {
     .nav-container {
         padding: 1rem;
         gap: 0;
-    }
-
-    .nav-logo {
-        font-size: 1rem;
-        margin-right: 0;
-    }
-
-    .nav-container {
-        padding: 1rem;
-        gap: 0;
         justify-content: space-between;
     }
 
@@ -663,6 +660,7 @@ h3 {
     }
 
     .nav-menu {
+        display: flex !important;
         position: fixed;
         left: -100%;
         top: 60px;
@@ -682,16 +680,20 @@ h3 {
         z-index: 999;
         height: calc(100vh - 60px);
         overflow-y: auto;
+        visibility: visible;
+        opacity: 1;
     }
 
     .nav-menu.active {
-        left: 0;
+        left: 0 !important;
     }
 
     .nav-menu li {
         width: 100%;
         padding: 0;
         display: block;
+        flex-shrink: 0;
+        white-space: normal;
     }
 
     .nav-menu a {
@@ -700,11 +702,29 @@ h3 {
         display: block;
         width: 100%;
         text-align: center;
+        white-space: normal;
     }
 
     .nav-toggle {
         display: flex !important;
         z-index: 1001;
+        position: relative;
+    }
+
+    .nav-toggle span {
+        background-color: var(--text-color);
+    }
+
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
     }
 
     .hero h1 {
