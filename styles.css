@@ -648,10 +648,15 @@ h3 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+
     .nav-container {
         padding: 1rem;
         gap: 0;
         justify-content: space-between;
+        position: relative;
     }
 
     .nav-logo {
@@ -660,32 +665,34 @@ h3 {
     }
 
     .nav-menu {
-        display: flex !important;
+        display: none !important;
         position: fixed;
-        left: -100%;
-        top: 60px;
+        left: 0;
+        top: 0;
         flex-direction: column;
         background-color: var(--bg-secondary);
         width: 100%;
         text-align: center;
-        transition: left 0.3s ease;
+        transition: transform 0.3s ease, opacity 0.3s ease;
         box-shadow: var(--shadow-lg);
-        padding: 2rem 0;
+        padding: 4rem 0 2rem 0;
         gap: 0;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: none;
         flex-wrap: nowrap;
         flex: none;
         min-width: auto;
-        overflow-x: visible;
-        z-index: 999;
-        height: calc(100vh - 60px);
+        overflow-x: hidden;
+        z-index: 1000;
+        height: 100vh;
         overflow-y: auto;
-        visibility: visible;
-        opacity: 1;
+        transform: translateX(-100%);
+        opacity: 0;
     }
 
     .nav-menu.active {
-        left: 0 !important;
+        display: flex !important;
+        transform: translateX(0) !important;
+        opacity: 1 !important;
     }
 
     .nav-menu li {
@@ -694,25 +701,40 @@ h3 {
         display: block;
         flex-shrink: 0;
         white-space: normal;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
     }
 
     .nav-menu a {
-        font-size: 1rem;
-        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        padding: 1.25rem 2rem;
         display: block;
         width: 100%;
         text-align: center;
         white-space: normal;
+        color: var(--text-color);
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        background-color: rgba(96, 165, 250, 0.1);
+        color: var(--primary-color);
     }
 
     .nav-toggle {
         display: flex !important;
         z-index: 1001;
         position: relative;
+        background: transparent;
     }
 
     .nav-toggle span {
         background-color: var(--text-color);
+        width: 24px;
+        height: 2px;
     }
 
     .nav-toggle.active span:nth-child(1) {
